@@ -1,70 +1,22 @@
-CSS stillerinizi buraya girin
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-/* html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-/* article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} */ 
+/* import /style/reset.css */
 
 
-
-*{  
+/* *{  
     border-collapse: collapse;
     border: 3px green solid;
     background-color: red;
- }
+ } */
 
 body{
-    margin:0;
+    background-color: #e3e9e8 ;
 }
+
 h1{
     font-size: 4rem;
-    color: #A75D5D;
+    color:#e3e9e8;
 }
 h2{
-    color: #A75D5D;
+    color: #e3e9e8;
 }
 
 
@@ -72,28 +24,30 @@ h2{
     padding:1%;
     width:90%;
     margin: auto;
-    background-color: #071952;
+    background-color: #003e55;
     display:flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
 }   
-
+.nav-bar nav{
+    display:flex;
+}
 .nav-bar nav a{
     text-decoration:none;
-    background-color:#FFC3A1;
-    vertical-align: center;
+    background-color:#e15545;
+    border:#003e55 solid 1px;
     font-size: 20px;
     padding:10px 10px;
-    color: #A75D5D;
-    border-radius: 10px;
+    color:#e3e9e8;
+    
 }
 
 .main{
     width:80%;
     margin: 20px auto; 
     height: 30rem;
-    background-image: url("https://jofibostorage.blob.core.windows.net/blog/front-end-developer-resume-example-and-guide-header.png");
+    background-image: url("https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1284735/retina_500x200_op-Ten-Front-End-Design-Rules-For-Developers_Luke-Newsletter-d3a7d3e7430ee224cab75104f11342a0.png");
     background-size: cover;
     background-position: center;
     display:flex;
@@ -114,9 +68,9 @@ h2{
 
 .main-container nav a{
     text-decoration: none;
-    color:#A75D5D;
+    color:#e3e9e8;
     font-size: 40px;
-    background-color: #F0997D;
+    background-color:#e15545;
     border-radius:10px;
     padding:10px 20px;
 }
@@ -138,7 +92,7 @@ h2{
 
 .item{
     width:30%;
-    margin:10px;
+    margin:1%;
     text-align: center;
     box-sizing: border-box
 }
@@ -154,16 +108,44 @@ footer{
     display:flex;
     justify-content: center;
     padding: 2%;
-    background-color: #071952;
+    background-color:#003e55;
 }
 
 footer nav{
-    background-color:#FFC3A1;
+    background-color:#e15545;
     padding: 20px;
     border-radius: 10px;
 }
 footer nav a{
     text-decoration: none;
-    color:black;
+    color:#e3e9e8;
     font-size:20px;
 }
+
+@media (max-width:800px){
+ .nav-bar{
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+ }   
+ .nav-bar nav{
+    flex-direction:column;
+    text-align:center;
+    
+ }
+ .nav-bar nav a {
+    margin:1% 0;
+    
+ }
+}
+
+@media (max-width:615px){
+    .content-container{
+        justify-content: space-evenly;
+    }
+    .item {
+        width: 45%;
+    }
+}
+
+
